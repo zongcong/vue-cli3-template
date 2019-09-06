@@ -1,0 +1,571 @@
+//初始化样式
+/*
+z-index 表
+左侧菜单 100
+头部 101
+左侧菜单遮罩 99
+返回列表按钮 98
+*/
+
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font: 14px/1.2 "Helvetica Neue", "Helvetica", "Microsoft YaHei", "Arial", sans-serif "SimHei"; // background: #E4E5E6;
+  font-family: "Helvetica","Helvetica Neue", "Microsoft YaHei", "Arial";
+}
+
+a {
+  color: #000;
+  text-decoration: none
+}
+
+em {
+  font-style: normal
+}
+
+li {
+  list-style: none
+}
+
+img {
+  border: 0;
+  vertical-align: middle
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+p {
+  word-wrap: break-word
+}
+
+* {
+  box-sizing: border-box
+}
+
+button:focus {
+  outline: none;
+}
+
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* relative */
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/*text-align*/
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+/*display*/
+
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-j-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fj {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-a {
+  align-items: center;
+}
+
+.flex-w {
+  flex-wrap: wrap;
+}
+
+.dn {
+  display: none;
+}
+
+// flex-布局内容
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-j-center {
+  justify-content: center;
+}
+
+.flex-a-center {
+  align-items: center;
+}
+
+.flex-a-start {
+  align-items: flex-start;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-s {
+  flex-shrink: 0;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/*float*/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/* vertical-align */
+
+.vm {
+  vertical-align: middle;
+}
+
+.vb {
+  vertical-align: bottom;
+}
+
+.vt {
+  vertical-align: top;
+}
+
+/* overflow */
+
+.ovh {
+  overflow: hidden;
+}
+
+.ova {
+  overflow: auto;
+}
+
+/* visibility */
+
+.vh {
+  visibility: hidden;
+}
+
+.vv {
+  visibility: visible;
+}
+
+/*margin*/
+
+.mlr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb1 {
+  margin-bottom: 1px;
+}
+
+.ml2 {
+  margin-left: 2px;
+}
+
+.mr2 {
+  margin-right: 2px;
+}
+
+.mt2 {
+  margin-top: 2px;
+}
+
+.mb2 {
+  margin-bottom: 2px;
+}
+
+.mt4 {
+  margin-top: 4px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.mg5 {
+  margin: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mg10 {
+  margin: 10px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.mg15 {
+  margin: 15px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.mg20 {
+  margin: 20px;
+}
+
+.mt24 {
+  margin-top: 24px;
+}
+.mb24 {
+  margin-bottom: 24px;
+}
+.ml24 {
+  margin-left: 24px;
+}
+.mr24 {
+  margin-right: 24px;
+}
+
+.pt5 {
+  padding-top: 5px;
+}
+
+.pr5 {
+  padding-right: 5px;
+}
+
+.pb5 {
+  padding-bottom: 5px;
+}
+
+.pl5 {
+  padding-left: 5px;
+}
+
+.pd5 {
+  padding: 5px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+
+.pd10 {
+  padding: 10px;
+}
+
+.pt15 {
+  padding-top: 15px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.pb15 {
+  padding-bottom: 15px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pd15 {
+  padding: 15px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pr20 {
+  padding-right: 20px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pd20 {
+  padding: 20px;
+}
+
+.pt24 {
+  padding-top: 24px;
+}
+.pb24 {
+  padding-bottom: 24px;
+}
+.pl24 {
+  padding-left: 24px;
+}
+.pr24 {
+  padding-right: 24px;
+}
+
+/*border-radius*/
+
+.bd-rs3 {
+  border-radius: 3px;
+}
+
+.bd-rs4 {
+  border-radius: 4px;
+}
+
+.bd-rs5 {
+  border-radius: 5px;
+}
+
+.bd-rs6 {
+  border-radius: 6px;
+}
+
+.bd-rs8 {
+  border-radius: 8px;
+}
+
+.bd-rs12 {
+  border-radius: 12px;
+}
+
+//transform上下左右居中
+.ctt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+.tb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位左右居中
+.lr {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 禁止换行, 文本溢出省略号显示 (一行)
+.ellipsis {
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ellipsis3 {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  > p > span {
+    color: #999 !important;
+  }
+}
+
+.ellipsis2 {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cur {
+  cursor: pointer;
+}
+
+// iPhone 6尺寸的根元素大小基准值
+$vm_fontSize: 75;
+
+// 根元素大小使用 vw 单位
+$vm_design: 750;
+
+.el-message-box .el-message-box__btns {
+  .el-button--primary {
+    background-color: #D93E36;
+    border-color: #D93E36;
+  }
+}
+
+html {
+  font-size: ($vm_fontSize / $vm_design) * 100vw;
+  // 同时，通过Media Queries 限制根元素最大最小值
+  @media screen and (max-width: 320px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 540px) {
+    font-size: 54px;
+    // body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小
+    //body {
+    //  max-width: 540px;
+    //  min-width: 320px;
+    //}
+  }
+}
