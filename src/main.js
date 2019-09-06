@@ -8,6 +8,8 @@ import APIS from './api'
 // 导入全局样式
 import './style/index.scss'
 
+// TODO 配置使用svg
+
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false

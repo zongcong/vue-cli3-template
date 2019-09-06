@@ -26,4 +26,5 @@ npm run lint
 ```
 
 ### Introduction
-一个 vue-cli3 模板
+- 一个 vue-cli3 模板
+- 优化打包和使用svg
