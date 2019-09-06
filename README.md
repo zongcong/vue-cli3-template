@@ -25,5 +25,5 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
+### Introduction
 一个 vue-cli3 模板
