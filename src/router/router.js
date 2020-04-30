@@ -8,7 +8,7 @@ import NProgress from 'nprogress' // 进度条
 
 Vue.use(Router)
 
-const WHILE_LIST = ['/login', '/', '/about'] // 不重定向白名单
+const WHILE_LIST = ['/login', '/', '/about', '/home'] // 不重定向白名单
 
 const GET_TOKEN = false
 
@@ -33,6 +33,11 @@ const router = new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import(/* webpackChunkName: "home" */ '../views/home/index.vue')
     }
     // {
     //   path: '*',

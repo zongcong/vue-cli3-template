@@ -4,7 +4,6 @@ import router from './router/router'
 import store from './store'
 import ElementUI from 'element-ui'
 import APIS from './api'
-
 // 导入全局样式
 import './style/index.scss'
 

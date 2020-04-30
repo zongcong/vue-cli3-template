@@ -25,6 +25,13 @@ npm run test
 npm run lint
 ```
 
+### generate template
+```
+npm run new:view
+```
+Enter your component name 
+carriage return
+
 ### Introduction
 - 一个 vue-cli3 模板
 - 优化打包和使用svg
