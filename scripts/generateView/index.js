@@ -5,6 +5,7 @@ const resolve = (...file) => path.resolve(__dirname, ...file)
 const log = message => console.log(chalk.green(`${message}`))
 const successLog = message => console.log(chalk.blue(`${message}`))
 const errorLog = error => console.log(chalk.red(`${error}`))
+// TODO 1、可以根据配置指定模板组件、 2、可以根据配置文件更改 table 表头字段
 
 // 导入模板
 const listTemplate = require('./listTemplate')
