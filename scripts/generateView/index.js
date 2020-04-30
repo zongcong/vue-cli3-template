@@ -9,6 +9,7 @@ const errorLog = error => console.log(chalk.red(`${error}`))
 // 导入模板
 const listTemplate = require('./listTemplate')
 const comTemplate = require('./comTemplate')
+const writeRouter = require('./router')
 
 // 生成文件
 const generateFile = (path, data) => {
@@ -65,6 +66,8 @@ process.stdin.on('data', async chunk => {
     await generateFile(vueFile, listTemplate(folderComName))
     log(`正在生成 ${enterName}/component 目录 vue 文件 ${formPopFile}`)
     await generateFile(formPopFile, comTemplate('formPop'))
+    log(`正在生成 router 目录最新 js 文件`)
+    await writeRouter(enterName)
     // log(`正在生成 entry 文件 ${entryFile}`)
     // await generateFile(entryFile, entryTemplate(componentName))
     successLog('生成成功')
