@@ -68,6 +68,7 @@ process.stdin.on('data', async chunk => {
     log(`正在生成 ${enterName}/component 目录 vue 文件 ${formPopFile}`)
     await generateFile(formPopFile, comTemplate('formPop'))
     log(`正在生成 router 目录最新 js 文件`)
+    // TODO 生成 router.js 参考一下 webpack 如何修改 html
     await writeRouter(enterName)
     // log(`正在生成 entry 文件 ${entryFile}`)
     // await generateFile(entryFile, entryTemplate(componentName))

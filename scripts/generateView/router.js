@@ -1,5 +1,6 @@
 /* eslint-disable */
 // 引入文件模块
+// TODO 生成 router.js 参考一下 webpack 如何修改 html
 const fs = require('fs')
 const path = require('path')
 const resolve = (...file) => path.resolve(__dirname, ...file)
